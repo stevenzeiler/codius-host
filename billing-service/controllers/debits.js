@@ -18,14 +18,24 @@ module.exports = function(codius) {
   return {
     create: function(req, res, next) {
       getToken(req.params.token).then(function(token) {
+<<<<<<< HEAD
         billing.debit(token, req.body.amount)
+=======
+        return billing.debit(token, req.body.amount)
+>>>>>>> 6f4ab268abbf5d0265bd8b6f0743ac9e228b9fa0
           .then(function(debit) {
             return token.getBalance().then(function(balance) {
               res.send({
                 success: true,
+<<<<<<< HEAD
  		balance: balance.get('balance'),
                 debit: debit
 	      })
+=======
+                balance: balance.get('balance'),
+                debit: debit
+              })
+>>>>>>> 6f4ab268abbf5d0265bd8b6f0743ac9e228b9fa0
             })
           })
       }) 

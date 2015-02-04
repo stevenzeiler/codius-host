@@ -23,9 +23,15 @@ module.exports = function(codius) {
             return token.getBalance().then(function(balance) {
               res.send({
                 success: true,
+<<<<<<< HEAD
  		balance: balance.get('balance'),
                 credit: credit
 	      })
+=======
+                balance: balance.get('balance'),
+                credit: credit
+              })
+>>>>>>> 6f4ab268abbf5d0265bd8b6f0743ac9e228b9fa0
             })
           })
       }) 
